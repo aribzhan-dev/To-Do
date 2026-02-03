@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты - TaskMaster</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/components.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <h1 class="logo">TaskMaster</h1>
+                <nav class="nav">
+                    <a href="../index.html" class="nav-link">Главная</a>
+                    <a href="tasks.html" class="nav-link">Задачи</a>
+                    <a href="about.html" class="nav-link">О проекте</a>
+                    <a href="contacts.html" class="nav-link active">Контакты</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <section class="contact-section">
+                <h2 class="page-title">Свяжитесь с нами</h2>
+                
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h3 class="content-subtitle">Контактная информация</h3>
+                        <div class="info-block">
+                            <p class="info-item">
+                                <strong>Email:</strong> 
+                                <a href="mailto:support@taskmaster.com">support@taskmaster.com</a>
+                            </p>
+                            <p class="info-item">
+                                <strong>Телефон:</strong> 
+                                <a href="tel:+77771234567">+7 (777) 123-45-67</a>
+                            </p>
+                            <p class="info-item">
+                                <strong>Адрес:</strong> 
+                                г. Астана, ул. Примерная, д. 1
+                            </p>
+                        </div>
+                        
+                        <div class="working-hours">
+                            <h4>Время работы поддержки:</h4>
+                            <p>Понедельник - Пятница: 9:00 - 18:00</p>
+                            <p>Суббота - Воскресенье: выходной</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-wrapper">
+                        <form class="contact-form" id="contactForm">
+                            <h3 class="form-title">Форма обратной связи</h3>
+                            
+                            <div class="form-row">
+                                <label for="userName" class="form-label">Ваше имя</label>
+                                <input 
+                                    type="text" 
+                                    id="userName" 
+                                    class="form-input" 
+                                    placeholder="Введите ваше имя"
+                                    required
+                                >
+                            </div>
+
+                            <div class="form-row">
+                                <label for="userEmail" class="form-label">Email</label>
+                                <input 
+                                    type="email" 
+                                    id="userEmail" 
+                                    class="form-input" 
+                                    placeholder="your@email.com"
+                                    required
+                                >
+                            </div>
+
+                            <div class="form-row">
+                                <label for="userPhone" class="form-label">Телефон</label>
+                                <input 
+                                    type="tel" 
+                                    id="userPhone" 
+                                    class="form-input" 
+                                    placeholder="+7 (777) 123-45-67"
+                                    required
+                                >
+                            </div>
+
+                            <div class="form-row">
+                                <label for="messageSubject" class="form-label">Тема сообщения</label>
+                                <select id="messageSubject" class="form-input" required>
+                                    <option value="">Выберите тему</option>
+                                    <option value="bug">Сообщить об ошибке</option>
+                                    <option value="feature">Предложить функцию</option>
+                                    <option value="question">Задать вопрос</option>
+                                    <option value="other">Другое</option>
+                                </select>
+                            </div>
+
+                            <div class="form-row">
+                                <label for="userMessage" class="form-label">Сообщение</label>
+                                <textarea 
+                                    id="userMessage" 
+                                    class="form-textarea" 
+                                    placeholder="Напишите ваше сообщение..."
+                                    rows="5"
+                                    required
+                                ></textarea>
+                            </div>
+
+                            <div class="form-row">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="agreeTerms" class="checkbox-input" required>
+                                    <span>Я согласен с политикой конфиденциальности</span>
+                                </label>
+                            </div>
+
+                            <div class="form-row">
+                                <p class="form-hint">Выберите удобный способ связи:</p>
+                                <div class="radio-group">
+                                    <label class="radio-label">
+                                        <input type="radio" name="contactMethod" value="email" class="radio-input" checked>
+                                        <span>Email</span>
+                                    </label>
+                                    <label class="radio-label">
+                                        <input type="radio" name="contactMethod" value="phone" class="radio-input">
+                                        <span>Телефон</span>
+                                    </label>
+                                    <label class="radio-label">
+                                        <input type="radio" name="contactMethod" value="any" class="radio-input">
+                                        <span>Любой</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Отправить сообщение</button>
+                        </form>
+
+                        <div class="form-result" id="formResult"></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">© 2024 TaskMaster. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

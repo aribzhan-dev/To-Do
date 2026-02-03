@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskMaster - Управляй своими задачами</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <h1 class="logo">TaskMaster</h1>
+                <nav class="nav">
+                    <a href="index.html" class="nav-link active">Главная</a>
+                    <a href="pages/tasks.html" class="nav-link">Задачи</a>
+                    <a href="pages/about.html" class="nav-link">О проекте</a>
+                    <a href="pages/contacts.html" class="nav-link">Контакты</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="hero">
+            <div class="container">
+                <h2 class="hero-title">Организуй свою жизнь правильно</h2>
+                <p class="hero-text">Простой и удобный способ управлять своими задачами каждый день</p>
+                <a href="pages/tasks.html" class="btn btn-primary">Начать работу</a>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <h2 class="section-title">Почему TaskMaster?</h2>
+                <div class="features-grid">
+                    <article class="feature-card">
+                        <h3 class="feature-title">Простота</h3>
+                        <p class="feature-text">Интуитивно понятный интерфейс для быстрого создания задач</p>
+                    </article>
+                    <article class="feature-card">
+                        <h3 class="feature-title">Эффективность</h3>
+                        <p class="feature-text">Приоритеты и категории помогут сосредоточиться на важном</p>
+                    </article>
+                    <article class="feature-card">
+                        <h3 class="feature-title">Сохранность</h3>
+                        <p class="feature-text">Все данные хранятся локально в вашем браузере</p>
+                    </article>
+                    <article class="feature-card">
+                        <h3 class="feature-title">Доступность</h3>
+                        <p class="feature-text">Работает на любом устройстве - телефон, планшет или компьютер</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number" id="totalTasks">0</div>
+                        <div class="stat-label">Всего задач</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" id="completedTasks">0</div>
+                        <div class="stat-label">Выполнено</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" id="activeTasks">0</div>
+                        <div class="stat-label">Активных</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">© 2024 TaskMaster. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мои задачи - TaskMaster</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/components.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <h1 class="logo">TaskMaster</h1>
+                <nav class="nav">
+                    <a href="../index.html" class="nav-link">Главная</a>
+                    <a href="tasks.html" class="nav-link active">Задачи</a>
+                    <a href="about.html" class="nav-link">О проекте</a>
+                    <a href="contacts.html" class="nav-link">Контакты</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <section class="task-section">
+                <h2 class="page-title">Мои задачи</h2>
+                
+                <div class="task-controls">
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-filter="all">Все</button>
+                        <button class="filter-btn" data-filter="active">Активные</button>
+                        <button class="filter-btn" data-filter="completed">Выполненные</button>
+                    </div>
+                    <div class="category-filter">
+                        <select id="categoryFilter" class="select-input">
+                            <option value="all">Все категории</option>
+                            <option value="work">Работа</option>
+                            <option value="personal">Личное</option>
+                            <option value="shopping">Покупки</option>
+                            <option value="health">Здоровье</option>
+                        </select>
+                    </div>
+                </div>
+
+                <form class="task-form" id="taskForm">
+                    <h3 class="form-title">Добавить новую задачу</h3>
+                    <div class="form-row">
+                        <input 
+                            type="text" 
+                            id="taskTitle" 
+                            class="form-input" 
+                            placeholder="Название задачи"
+                            required
+                        >
+                    </div>
+                    <div class="form-row">
+                        <textarea 
+                            id="taskDescription" 
+                            class="form-textarea" 
+                            placeholder="Описание задачи"
+                            rows="3"
+                        ></textarea>
+                    </div>
+                    <div class="form-row form-grid">
+                        <select id="taskCategory" class="form-input" required>
+                            <option value="">Выберите категорию</option>
+                            <option value="work">Работа</option>
+                            <option value="personal">Личное</option>
+                            <option value="shopping">Покупки</option>
+                            <option value="health">Здоровье</option>
+                        </select>
+                        <select id="taskPriority" class="form-input">
+                            <option value="low">Низкий приоритет</option>
+                            <option value="medium" selected>Средний приоритет</option>
+                            <option value="high">Высокий приоритет</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="taskUrgent" class="checkbox-input">
+                            <span>Срочная задача</span>
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Добавить задачу</button>
+                </form>
+
+                <div class="tasks-list" id="tasksList">
+                </div>
+
+                <div class="empty-state" id="emptyState">
+                    <p>У вас пока нет задач. Добавьте первую!</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">© 2024 TaskMaster. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
